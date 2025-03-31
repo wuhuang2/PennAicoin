@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>记账本程序帮助文档</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+        h1 {
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            border-bottom: 3px solid #4a90e2;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-family: monospace;
+            color: #666;
+        }
+        .warning {
+            color: #e67e22;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+        }
+        .note {
+            color: #27ae60;
+            font-weight: bold;
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background-color: #4a90e2;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>记账本程序帮助文档</h1>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2><span class="icon">💻</span> 一、开发环境与理论支持环境</h2>
+            <ul>
+                <li>操作系统：Windows 10 x86</li>
+                <li>开发工具：Python原生IDLE</li>
+                <li>数据库：SQLite3</li>
+                <li>语音识别模型：Vosk（模型文件：vosk-model-small-cn-0.22）</li>
+                <li>理论上支持Windows10 x64 、Windows10 x86 、Windows11 x64 等Microsoft® Windows系列系统（不向下兼容）</li>
+                <li>因为使用跨平台的库，所以理论上支持 Apple inc. 的Mac OS系列系统 以及 Linux主流发行版（Ubuntu、Kail等）（不向下兼容）</li>
+                <li>开发时使用Windows10 x86环境开发 </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">⚙️</span> 二、技术原理</h2>
+            <ul>
+                <li>语音识别技术：基于 Vosk 的 KaldiRecognizer，利用深度学习模型对语音信号进行特征提取和模式匹配，实现语音到文本的转换。</li>
+                <li>自然语言处理：使用 jieba 分词对识别出的文本进行分词处理，提取关键信息（如日期、金额、币种等）。</li>
+                <li>数据库管理：采用 SQLite3 关系型数据库，实现数据的存储、查询、更新和删除操作。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📝</span> 三、开发语言</h2>
+            <ul>
+                <li>编程语言：Python 3.13.0</li>
+                <li>GUI 库：PyQt5</li>
+                <li>语音处理库：pyaudio、vosk、wave</li>
+                <li>文本处理库：re、json、jieba</li>
+                <li>多线程库：QThread</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">🌐</span> 四、使用的开源项目</h2>
+            <ul>
+                <li>PyQt5：用于构建图形用户界面，提供丰富的控件和布局管理器，实现界面的交互和显示。</li>
+                <li>Vosk：轻量级的语音识别引擎，支持多种语言，能够实时将语音转换为文本。</li>
+                <li>pyaudio：用于音频数据的输入和输出，实现与麦克风和扬声器的交互。</li>
+                <li>jieba：中文分词库，能够对中文文本进行高效的分词处理，为信息提取提供支持。</li>
+                <li>SQLite3：嵌入式关系型数据库，方便数据的本地存储和管理。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📊</span> 五、程序功能概述</h2>
+            <ul>
+                <li>账本管理：添加、删除、修改和查询账目记录，支持多种币种和收支类型。</li>
+                <li>语音输入：通过语音识别技术，将语音转换为文本，并自动提取相关信息添加到账本中。</li>
+                <li>数据搜索：根据关键词搜索账目记录，快速定位所需信息。</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">📋</span> 六、使用说明</h2>
+            <ol>
+                <li>启动程序：运行记账本程序，进入主界面。</li>
+                <li>添加账目记录：点击 “添加账本” 按钮，在弹出的对话框中填写相关信息（日期、金额、币种、收支类型、详细分类、备注信息），然后点击 “添加记录” 按钮保存。</li>
+                <li>语音输入：点击 “开始录音” 按钮，对着麦克风说话，程序会自动识别语音并转换为文本，提取关键信息后添加到账本中。录音过程中可以点击 “结束录音” 按钮停止录音。</li>
+                <li>搜索记录：点击 “搜索记录” 按钮，在弹出的对话框中输入关键词，点击 “搜索” 按钮查看符合条件的记录。</li>
+                <li>修改记录：在表格中选择要修改的记录，点击 “修改” 按钮，在弹出的对话框中修改相关信息后点击 “修改记录” 按钮保存。</li>
+                <li>删除记录：在表格中选择要删除的记录，点击 “回收站” 按钮，确认删除后记录将从数据库中移除。</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2><span class="icon">❓</span> 七、常见问题解答</h2>
+            <div class="question">
+                <h3>语音识别不准确怎么办？</h3>
+                <ul>
+                    <li>确保麦克风正常工作，周围环境安静，减少噪音干扰。</li>
+                    <li>说话时尽量清晰、语速适中，避免使用过于复杂的句子。</li>
+                    <li>可以尝试多次录音，选择识别结果最准确的一次。</li>
+                </ul>
+            </div>
+            <div class="question">
+                <h3>如何更新语音识别模型？</h3>
+                <p>访问 Vosk 官方网站，下载最新的中文语音识别模型文件，替换程序所在目录下的 <code>vosk-model-small-cn-0.22</code> 文件夹即可（同时修改源代码文件）。</p>
+            </div>
+            <div class="question">
+                <h3>程序运行报错怎么办？</h3>
+                <ul>
+                    <li>检查 Python 环境是否正确配置，相关依赖库是否安装完整。</li>
+                    <li>查看错误信息，根据提示排查问题。如果无法解决，可以联系开发者寻求帮助。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
