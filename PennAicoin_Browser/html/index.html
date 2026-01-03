@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pennaicoin Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Lucida Handwriting', cursive, 'Arial', sans-serif; /* 使用 Lucida Handwriting 作为主要字体 */
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 30px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        .search-box {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            border-radius: 50px;
+            padding: 5px 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1), -5px -5px 15px rgba(255,255,255,0.7);
+            transition: all 0.3s ease;
+        }
+        .search-box:hover {
+            box-shadow: 8px 8px 20px rgba(0,0,0,0.1), -8px -8px 20px rgba(255,255,255,0.7);
+        }
+        .search-input {
+            border: none;
+            background: transparent;
+            padding: 15px;
+            font-size: 1.2rem;
+            color: #333;
+            width: 400px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        .search-button {
+            background: linear-gradient(145deg, #000000, #333333); /* 黑色背景 */
+            border: none;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .search-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+        .search-button:active {
+            transform: translateY(0);
+        }
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            fill: white;
+        }
+        @media (max-width: 768px) {
+            .search-box {
+                width: 90%;
+                padding: 5px 15px;
+            }
+            .search-input {
+                width: 100%;
+                font-size: 1rem;
+            }
+            .search-button {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+        }
+        .footer {
+            font-size: 14px;
+            color: #666;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">Pennaicoin Home</div>
+    <div class="search-container">
+        <form class="search-box" action="https://www.bing.com/search" method="get" target="_blank">
+            <input type="text" class="search-input" name="q" placeholder="输入搜索内容...">
+            <button type="submit" class="search-button">
+                <svg class="search-icon" viewBox="0 0 24 24">
+                    <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+                搜索
+            </button>
+        </form>
+    </div>
+    <div class="footer">
+        <p>欢迎使用 Pennaicoin Browser</p>
+        <p>版权所有 © Wuhuang2@github 2025</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+# ======================================================================== #
+# Copyright (c) 2025 wuhuang2                                            #
+#                                                                          #
+# Licensed under the MIT License (the "License");                          #
+# you may not use this file except in compliance with the License.          #
+# See the LICENSE file in the project root for full terms.                  #
+#                                                                          #
+# ======================================================================== #
